@@ -1,15 +1,20 @@
 package com.hanghae99.airbnbclonebe.model;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 @Entity
+@Getter
+@NoArgsConstructor
 public class User {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @Column(name = "USER_ID")
     private Long id;
 
     @Column(nullable = false, unique = true)
