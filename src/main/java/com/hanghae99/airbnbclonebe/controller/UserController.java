@@ -29,8 +29,4 @@ public class UserController {
         return userService.findUser(userDetails);
     }
 
-    @PostMapping("/api/host/register")
-    public ResponseDto registerHost(@AuthenticationPrincipal UserDetailsImpl userDetails) {
-        return userService.registerHost(userDetails);
-    }
 }

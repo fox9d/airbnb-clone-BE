@@ -45,4 +45,13 @@ public class Room {
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "room")
     private List<Image> imageList = new ArrayList<>();
 
+    public Room(String title, User user, int maxGuest, int price, String location, String information, String category) {
+        this.title = title;
+        this.user = user;
+        this.maxGuest = maxGuest;
+        this.price = price;
+        this.location = location;
+        this.information = information;
+        this.category = category;
+    }
 }
